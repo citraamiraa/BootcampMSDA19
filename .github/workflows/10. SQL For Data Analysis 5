@@ -1,0 +1,37 @@
+# SQL JOIN : Berfungsi menggabungkan tabel
+# INNER JOIN : Berisi irisan dari kedua tabel  
+# LEFT JOIN : Mengambil semua data dari tabel kiri (tabel pertama) dan data yang cocok dari tabel kanan (tabel kedua)
+# RIGHT JOIN : Mengambil semua data dari tabel kanan dan data yang cocok dari tabel kiri.
+# FULL OUTER JOIN : Gabungan dari kedua tabel, mengambil semua data
+
+# Contoh case :
+# Perusahaan telekomunikasi dengan 2 lini  bisnis : telepon & internet
+
+CREATE TABLE konsumen_telepon (
+  id_telepon VARCHAR,
+  nama_konsumen VARCHAR
+)
+
+CREATE TABLE konsumen_internet (
+  id_internet VARCHAR,
+  nama_konsumen VARCHAR
+)
+
+# Run satu persatu syntax sampai muncul tabel
+# Menggunakan INSERT INTO untuk menginput data ke dalam tabel
+
+INSERT INTO konsumen_telepon VAlUES
+('TELP1', 'Andri'),
+('TELP2', 'Budi'),
+('TELP3', 'Chandra'),
+('TELP4', 'Dodi'),
+('TELP5', 'Edi')
+
+INSERT INTO konsumen_internet VAlUES
+('TELP1', 'Alex'),
+('TELP2', 'Budi'),
+('TELP3', 'Chandra'),
+('TELP4', 'Desi'),
+('TELP5', 'Edwin')
+
+# Run satu persatu syntax sampai data terinput ke dala mtabel
