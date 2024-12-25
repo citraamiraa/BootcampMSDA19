@@ -35,3 +35,7 @@ INSERT INTO konsumen_internet VAlUES
 ('TELP5', 'Edwin')
 
 # Run satu persatu syntax sampai data terinput ke dala mtabel
+# Memunculkan data dari kedua tabel dengan SELECT * FROM
+
+SELECT * FROM konsumen_telepon
+SELECT * FROM konsumen_internet
