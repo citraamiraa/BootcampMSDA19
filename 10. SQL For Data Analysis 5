@@ -1,6 +1,4 @@
 # SQL JOIN : Berfungsi menggabungkan tabel
-# INNER JOIN : Berisi irisan dari kedua tabel  
-# LEFT JOIN : Mengambil semua data dari tabel kiri (tabel pertama) dan data yang cocok dari tabel kanan (tabel kedua)
 # RIGHT JOIN : Mengambil semua data dari tabel kanan dan data yang cocok dari tabel kiri.
 # FULL OUTER JOIN : Gabungan dari kedua tabel, mengambil semua data
 
@@ -39,3 +37,34 @@ INSERT INTO konsumen_internet VAlUES
 
 SELECT * FROM konsumen_telepon
 SELECT * FROM konsumen_internet
+
+# INNER JOIN : Berisi irisan dari kedua tabel  
+# Contoh case :
+# INNER JOIN telp & inet menggunakan kolom nama
+
+SELECT
+	id_telepon,
+  id_internet,
+  konsumen_telepon.nama_konsumen
+FROM konsumen_telepon
+INNER  JOIN konsumen_internet
+ON konsumen_telepon.nama_konsumen = konsumen_internet.nama_konsumen
+
+# setelah tanda titik disebut 'prefix', untuk menunjukkan kolom tsb diambil dari tabel mana
+# A INNER JOIN B akan sama dengan b INNER JOIN a
+
+# LEFT JOIN : Mengambil semua data dari tabel kiri (tabel pertama) dan data yang cocok dari tabel kanan (tabel kedua)
+# Contoh case :
+# LEFT JOIN telp & inet menggunakan kolom nama
+
+SELECT
+	id_telepon,
+    id_internet,
+    konsumen_telepon.nama_konsumen,
+    konsumen_internet.nama_konsumen
+FROM konsumen_telepon
+LEFT JOIN konsumen_internet
+ON konsumen_telepon.nama_konsumen = konsumen_internet.nama_konsumen
+
+# A INNER JOIN B tidak akan sama dengan b INNER JOIN a
+# Jika di run akan muncul data NULL
